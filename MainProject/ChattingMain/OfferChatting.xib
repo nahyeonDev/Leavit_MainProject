@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Regular.otf">
+            <string>NotoSansKR-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="70" id="KGk-i7-Jjw" customClass="OfferChatting" customModule="MainProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-rB-Lf7">
+                        <rect key="frame" x="17" y="15" width="67.5" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYA-5X-Wl0">
+                                <rect key="frame" x="12" y="10" width="38.5" height="20"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="KYA-5X-Wl0" firstAttribute="leading" secondItem="7pr-rB-Lf7" secondAttribute="leading" constant="12" id="N3u-sV-bJL"/>
+                            <constraint firstItem="KYA-5X-Wl0" firstAttribute="top" secondItem="7pr-rB-Lf7" secondAttribute="top" constant="10" id="etj-pS-Ltk"/>
+                            <constraint firstAttribute="trailing" secondItem="KYA-5X-Wl0" secondAttribute="trailing" constant="17" id="gM5-ul-yQ7"/>
+                            <constraint firstAttribute="bottom" secondItem="KYA-5X-Wl0" secondAttribute="bottom" constant="10" id="zv3-0h-mfi"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnS-lH-7F4">
+                        <rect key="frame" x="307.5" y="15" width="67.5" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL2-T9-z4m">
+                                <rect key="frame" x="17" y="10" width="38.5" height="20"/>
+                                <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50588238240000005" green="0.27450981740000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SL2-T9-z4m" secondAttribute="trailing" constant="12" id="Jqj-Lb-oUP"/>
+                            <constraint firstItem="SL2-T9-z4m" firstAttribute="leading" secondItem="ZnS-lH-7F4" secondAttribute="leading" constant="17" id="VJo-dW-yfL"/>
+                            <constraint firstItem="SL2-T9-z4m" firstAttribute="top" secondItem="ZnS-lH-7F4" secondAttribute="top" constant="10" id="ZBJ-MI-NL8"/>
+                            <constraint firstAttribute="bottom" secondItem="SL2-T9-z4m" secondAttribute="bottom" constant="10" id="ywv-KJ-MSy"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 7:19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYe-Sp-CAh">
+                        <rect key="frame" x="94.5" y="34" width="48.5" height="19"/>
+                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="12"/>
+                        <color key="textColor" red="0.61176472900000001" green="0.61176472900000001" blue="0.61176472900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 7:19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbJ-Fg-HfZ">
+                        <rect key="frame" x="249" y="34" width="48.5" height="19"/>
+                        <fontDescription key="fontDescription" name="NotoSansKR-Regular" family="Noto Sans KR" pointSize="12"/>
+                        <color key="textColor" red="0.61176472900000001" green="0.61176472900000001" blue="0.61176472900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZnS-lH-7F4" firstAttribute="leading" secondItem="AbJ-Fg-HfZ" secondAttribute="trailing" constant="10" id="4HL-dU-6nT"/>
+                    <constraint firstItem="AbJ-Fg-HfZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="34" id="4IP-Cc-lKr"/>
+                    <constraint firstAttribute="bottom" secondItem="AbJ-Fg-HfZ" secondAttribute="bottom" constant="17" id="KfB-9x-FhE"/>
+                    <constraint firstItem="WYe-Sp-CAh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="34" id="PIW-oF-0Ge"/>
+                    <constraint firstAttribute="bottom" secondItem="ZnS-lH-7F4" secondAttribute="bottom" constant="15" id="WBG-ne-0ZU"/>
+                    <constraint firstAttribute="bottom" secondItem="7pr-rB-Lf7" secondAttribute="bottom" constant="15" id="b9d-kc-dIv"/>
+                    <constraint firstItem="7pr-rB-Lf7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ctt-N3-jZD"/>
+                    <constraint firstItem="ZnS-lH-7F4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ekT-7v-85I"/>
+                    <constraint firstItem="WYe-Sp-CAh" firstAttribute="leading" secondItem="7pr-rB-Lf7" secondAttribute="trailing" constant="10" id="j7b-uQ-gZ2"/>
+                    <constraint firstAttribute="bottom" secondItem="WYe-Sp-CAh" secondAttribute="bottom" constant="17" id="nlv-Hz-smh"/>
+                    <constraint firstItem="7pr-rB-Lf7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="qdK-T9-UrW"/>
+                    <constraint firstAttribute="trailing" secondItem="ZnS-lH-7F4" secondAttribute="trailing" constant="17" id="xFK-3L-FVn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageView" destination="7pr-rB-Lf7" id="zow-BR-oIt"/>
+                <outlet property="messageView2" destination="ZnS-lH-7F4" id="bCD-Bz-v7Y"/>
+                <outlet property="mlabel" destination="KYA-5X-Wl0" id="hrH-jF-hwu"/>
+                <outlet property="mlabel2" destination="SL2-T9-z4m" id="FfU-Qm-rtd"/>
+                <outlet property="mtlabel" destination="WYe-Sp-CAh" id="xsU-Ls-2Qz"/>
+                <outlet property="mtlabel2" destination="AbJ-Fg-HfZ" id="GQq-0O-aau"/>
+            </connections>
+            <point key="canvasLocation" x="-26" y="62"/>
+        </tableViewCell>
+    </objects>
+</document>

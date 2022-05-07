@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "fillDesign.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "fillDesign@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "3x",
+      "idiom" : "universal",
+      "filename" : "fillDesign@3x.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

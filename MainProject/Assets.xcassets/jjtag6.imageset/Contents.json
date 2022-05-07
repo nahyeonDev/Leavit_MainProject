@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "jjtag6.png"
+    },
+    {
+      "scale" : "2x",
+      "filename" : "jjtag6@2x.png",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "jjtag6@3x.png",
+      "scale" : "3x",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
