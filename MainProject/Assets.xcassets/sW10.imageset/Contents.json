@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "sW10.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "sW10@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "sW10@3x.png",
+      "scale" : "3x",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
