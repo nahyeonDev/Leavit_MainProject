@@ -19,13 +19,6 @@
 		2C711D7B27F408AC0048C6E1 /* CSFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C711D7A27F408AC0048C6E1 /* CSFirstVC.swift */; };
 		2C711D7D27F408ED0048C6E1 /* CSSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C711D7C27F408ED0048C6E1 /* CSSecondVC.swift */; };
 		2C711D7F27F4091F0048C6E1 /* CSMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C711D7E27F4091F0048C6E1 /* CSMyTableViewCell.swift */; };
-		2C7135AB28241A8C00511394 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135A428241A8C00511394 /* NotoSansKR-Light.otf */; };
-		2C7135AC28241A8C00511394 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135A528241A8C00511394 /* NotoSansKR-Bold.otf */; };
-		2C7135AD28241A8C00511394 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135A628241A8C00511394 /* NotoSansKR-Regular.otf */; };
-		2C7135AE28241A8C00511394 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135A728241A8C00511394 /* NotoSansKR-Black.otf */; };
-		2C7135AF28241A8C00511394 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135A828241A8C00511394 /* OFL.txt */; };
-		2C7135B028241A8C00511394 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135A928241A8C00511394 /* NotoSansKR-Medium.otf */; };
-		2C7135B128241A8C00511394 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135AA28241A8C00511394 /* NotoSansKR-Thin.otf */; };
 		2C7135B328241DC400511394 /* ScrapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7135B228241DC400511394 /* ScrapVC.swift */; };
 		2C7135B528241E1900511394 /* MenuCell_JSL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135B428241E1900511394 /* MenuCell_JSL.xib */; };
 		2C7135B728241E6000511394 /* MenuCell_JOL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7135B628241E5F00511394 /* MenuCell_JOL.xib */; };
@@ -167,6 +160,17 @@
 		D6DA392D27EF602C006A6F4D /* HomeCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DA392B27EF602C006A6F4D /* HomeCollectionViewCell2.xib */; };
 		D6DA393027EF6063006A6F4D /* HomeContentTableView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA392E27EF6063006A6F4D /* HomeContentTableView2.swift */; };
 		D6DA393127EF6063006A6F4D /* HomeContentTableView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6DA392F27EF6063006A6F4D /* HomeContentTableView2.xib */; };
+		D6DD12E22827F1B40064024A /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12DB2827F1B30064024A /* NotoSansKR-Black.otf */; };
+		D6DD12E32827F1B40064024A /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12DC2827F1B40064024A /* NotoSansKR-Medium.otf */; };
+		D6DD12E42827F1B40064024A /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12DD2827F1B40064024A /* NotoSansKR-Bold.otf */; };
+		D6DD12E52827F1B40064024A /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12DE2827F1B40064024A /* NotoSansKR-Thin.otf */; };
+		D6DD12E62827F1B40064024A /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12DF2827F1B40064024A /* NotoSansKR-Light.otf */; };
+		D6DD12E72827F1B40064024A /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12E02827F1B40064024A /* OFL.txt */; };
+		D6DD12E82827F1B40064024A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6DD12E12827F1B40064024A /* NotoSansKR-Regular.otf */; };
+		D6DD12EB2827F3B20064024A /* HomeAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD12EA2827F3B20064024A /* HomeAlarmViewController.swift */; };
+		D6DD12ED2827F4040064024A /* HomeReAla.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD12EC2827F4040064024A /* HomeReAla.swift */; };
+		D6DD12EF2827F4250064024A /* ReAlaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD12EE2827F4250064024A /* ReAlaCell.swift */; };
+		D6DD12F12827F94E0064024A /* homeitems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DD12F02827F94E0064024A /* homeitems.swift */; };
 		D6DE3ABE2742B69E0006A45E /* JobSelect_jobofferwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE3ABD2742B69E0006A45E /* JobSelect_jobofferwrite.swift */; };
 		D6DE644D27F7370E00F608C7 /* SearchAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE644C27F7370E00F608C7 /* SearchAlterView.swift */; };
 		D6DFDA552812C68700609973 /* ChatResearchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DFDA542812C68700609973 /* ChatResearchDetail.swift */; };
@@ -193,13 +197,6 @@
 		2C711D7A27F408AC0048C6E1 /* CSFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSFirstVC.swift; sourceTree = "<group>"; };
 		2C711D7C27F408ED0048C6E1 /* CSSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSecondVC.swift; sourceTree = "<group>"; };
 		2C711D7E27F4091F0048C6E1 /* CSMyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSMyTableViewCell.swift; sourceTree = "<group>"; };
-		2C7135A428241A8C00511394 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		2C7135A528241A8C00511394 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		2C7135A628241A8C00511394 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
-		2C7135A728241A8C00511394 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
-		2C7135A828241A8C00511394 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
-		2C7135A928241A8C00511394 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
-		2C7135AA28241A8C00511394 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		2C7135B228241DC400511394 /* ScrapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapVC.swift; sourceTree = "<group>"; };
 		2C7135B428241E1900511394 /* MenuCell_JSL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell_JSL.xib; sourceTree = "<group>"; };
 		2C7135B628241E5F00511394 /* MenuCell_JOL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell_JOL.xib; sourceTree = "<group>"; };
@@ -347,6 +344,17 @@
 		D6DA392B27EF602C006A6F4D /* HomeCollectionViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell2.xib; sourceTree = "<group>"; };
 		D6DA392E27EF6063006A6F4D /* HomeContentTableView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentTableView2.swift; sourceTree = "<group>"; };
 		D6DA392F27EF6063006A6F4D /* HomeContentTableView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeContentTableView2.xib; sourceTree = "<group>"; };
+		D6DD12DB2827F1B30064024A /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Black.otf"; path = "../../../../Downloads/Noto_Sans_KR/NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		D6DD12DC2827F1B40064024A /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "../../../../Downloads/Noto_Sans_KR/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		D6DD12DD2827F1B40064024A /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../Downloads/Noto_Sans_KR/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		D6DD12DE2827F1B40064024A /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Thin.otf"; path = "../../../../Downloads/Noto_Sans_KR/NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		D6DD12DF2827F1B40064024A /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Light.otf"; path = "../../../../Downloads/Noto_Sans_KR/NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		D6DD12E02827F1B40064024A /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OFL.txt; path = ../../../../Downloads/Noto_Sans_KR/OFL.txt; sourceTree = "<group>"; };
+		D6DD12E12827F1B40064024A /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Regular.otf"; path = "../../../../Downloads/Noto_Sans_KR/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		D6DD12EA2827F3B20064024A /* HomeAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlarmViewController.swift; sourceTree = "<group>"; };
+		D6DD12EC2827F4040064024A /* HomeReAla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReAla.swift; sourceTree = "<group>"; };
+		D6DD12EE2827F4250064024A /* ReAlaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReAlaCell.swift; sourceTree = "<group>"; };
+		D6DD12F02827F94E0064024A /* homeitems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeitems.swift; sourceTree = "<group>"; };
 		D6DE3ABD2742B69E0006A45E /* JobSelect_jobofferwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSelect_jobofferwrite.swift; sourceTree = "<group>"; };
 		D6DE644C27F7370E00F608C7 /* SearchAlterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlterView.swift; sourceTree = "<group>"; };
 		D6DFDA542812C68700609973 /* ChatResearchDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResearchDetail.swift; sourceTree = "<group>"; };
@@ -501,14 +509,14 @@
 				D6DE3ABC274288DF0006A45E /* JobSearchMain */,
 				D6B7F3A42768BE8A003B4012 /* DetailViewSub */,
 				2CE19994276765F200399CB6 /* New Group */,
+				D6DD12DB2827F1B30064024A /* NotoSansKR-Black.otf */,
+				D6DD12DD2827F1B40064024A /* NotoSansKR-Bold.otf */,
+				D6DD12DF2827F1B40064024A /* NotoSansKR-Light.otf */,
+				D6DD12DC2827F1B40064024A /* NotoSansKR-Medium.otf */,
+				D6DD12E12827F1B40064024A /* NotoSansKR-Regular.otf */,
+				D6DD12DE2827F1B40064024A /* NotoSansKR-Thin.otf */,
+				D6DD12E02827F1B40064024A /* OFL.txt */,
 				D62748EB273ABB5A0006B9FA /* Assets.xcassets */,
-				2C7135A728241A8C00511394 /* NotoSansKR-Black.otf */,
-				2C7135A528241A8C00511394 /* NotoSansKR-Bold.otf */,
-				2C7135A428241A8C00511394 /* NotoSansKR-Light.otf */,
-				2C7135A928241A8C00511394 /* NotoSansKR-Medium.otf */,
-				2C7135A628241A8C00511394 /* NotoSansKR-Regular.otf */,
-				2C7135AA28241A8C00511394 /* NotoSansKR-Thin.otf */,
-				2C7135A828241A8C00511394 /* OFL.txt */,
 				D62748ED273ABB5A0006B9FA /* LaunchScreen.storyboard */,
 				2C4A9CA027579F8B006FC662 /* GoogleService-Info.plist */,
 				D62748F0273ABB5A0006B9FA /* Info.plist */,
@@ -661,6 +669,7 @@
 		D6B0D5EF275114B400F4197D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D6DD12E92827F38F0064024A /* HomeAlarm */,
 				D6B0D5F0275114D500F4197D /* Home_Main.storyboard */,
 				D6B0D5F6275121BD00F4197D /* HomeViewDetail.swift */,
 				D6EA4BA42762462B00D86DF9 /* HomeOfferDetail.swift */,
@@ -697,6 +706,17 @@
 				D6DA392F27EF6063006A6F4D /* HomeContentTableView2.xib */,
 			);
 			path = HomeContent2;
+			sourceTree = "<group>";
+		};
+		D6DD12E92827F38F0064024A /* HomeAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				D6DD12EA2827F3B20064024A /* HomeAlarmViewController.swift */,
+				D6DD12EC2827F4040064024A /* HomeReAla.swift */,
+				D6DD12EE2827F4250064024A /* ReAlaCell.swift */,
+				D6DD12F02827F94E0064024A /* homeitems.swift */,
+			);
+			path = HomeAlarm;
 			sourceTree = "<group>";
 		};
 		D6DE3AB8274288940006A45E /* Main */ = {
@@ -819,31 +839,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7135AF28241A8C00511394 /* OFL.txt in Resources */,
 				D62748EF273ABB5A0006B9FA /* LaunchScreen.storyboard in Resources */,
 				2CF1852E275A405E009AF0B9 /* FocusView.xib in Resources */,
 				D697A92C27EDEAEA0004B34B /* HomeContentTableView1.xib in Resources */,
 				D68A73442820ECEA003AD984 /* MenuCell_ScrapVC.xib in Resources */,
 				D68A735C2820ECEA003AD984 /* ResumeSearch.storyboard in Resources */,
+				D6DD12E42827F1B40064024A /* NotoSansKR-Bold.otf in Resources */,
+				D6DD12E62827F1B40064024A /* NotoSansKR-Light.otf in Resources */,
 				D65F379727FB3489001DF0A1 /* DetailViewSub2.storyboard in Resources */,
-				2C7135B028241A8C00511394 /* NotoSansKR-Medium.otf in Resources */,
 				D68A736D2820ECF9003AD984 /* Resume_Search.storyboard in Resources */,
 				D68A736F2820ECF9003AD984 /* JobOffer_Info.storyboard in Resources */,
 				D68A73422820ECEA003AD984 /* MenuCell_ReviewVC.xib in Resources */,
 				D68A734B2820ECEA003AD984 /* MenuCell_RO.xib in Resources */,
+				D6DD12E72827F1B40064024A /* OFL.txt in Resources */,
 				D68A735A2820ECEA003AD984 /* Focus_RS.xib in Resources */,
 				2CA3ABE1275A399300D7082A /* Chatting_Main.storyboard in Resources */,
 				D6DA392D27EF602C006A6F4D /* HomeCollectionViewCell2.xib in Resources */,
 				D684166127412DBF00A1FB22 /* JobOfferWrite_Main.storyboard in Resources */,
-				2C7135AE28241A8C00511394 /* NotoSansKR-Black.otf in Resources */,
-				2C7135AD28241A8C00511394 /* NotoSansKR-Regular.otf in Resources */,
+				D6DD12E22827F1B40064024A /* NotoSansKR-Black.otf in Resources */,
 				D683F44E27A3F0EB0045A7BF /* MyPage_Main.storyboard in Resources */,
 				D68A73592820ECEA003AD984 /* Focus_JSL.xib in Resources */,
-				2C7135B128241A8C00511394 /* NotoSansKR-Thin.otf in Resources */,
 				2C7135B928241E7F00511394 /* Focus_JOL.xib in Resources */,
 				D6DFDA592812C6DD00609973 /* ResearchChatting.xib in Resources */,
+				D6DD12E52827F1B40064024A /* NotoSansKR-Thin.otf in Resources */,
 				2C4A9CA127579F8B006FC662 /* GoogleService-Info.plist in Resources */,
-				2C7135AB28241A8C00511394 /* NotoSansKR-Light.otf in Resources */,
 				D6B7F3A62768BF14003B4012 /* DetailViewSub.storyboard in Resources */,
 				2C711D7727F357E00048C6E1 /* CSMenuCell.xib in Resources */,
 				D68A73452820ECEA003AD984 /* Focus_ReviewVC.xib in Resources */,
@@ -854,8 +873,8 @@
 				D697A93027EDEF730004B34B /* HomeCollectionViewCell1.xib in Resources */,
 				2CE1999A2767663000399CB6 /* DetailViewMain.storyboard in Resources */,
 				D68A73432820ECEA003AD984 /* Focus_ScrapVC.xib in Resources */,
+				D6DD12E32827F1B40064024A /* NotoSansKR-Medium.otf in Resources */,
 				2C7135B728241E6000511394 /* MenuCell_JOL.xib in Resources */,
-				2C7135AC28241A8C00511394 /* NotoSansKR-Bold.otf in Resources */,
 				D69A45B227413DDC00B17D6A /* JobSearchWrite_Main.storyboard in Resources */,
 				D6B0D5F1275114D500F4197D /* Home_Main.storyboard in Resources */,
 				D620126C27468CE5002A64D8 /* Map_Main.storyboard in Resources */,
@@ -863,6 +882,7 @@
 				D68A73482820ECEA003AD984 /* Focus_RO.xib in Resources */,
 				D66F9BFC280EE3AA0062375D /* OfferChatting.xib in Resources */,
 				D6DA393127EF6063006A6F4D /* HomeContentTableView2.xib in Resources */,
+				D6DD12E82827F1B40064024A /* NotoSansKR-Regular.otf in Resources */,
 				D62748EA273ABB580006B9FA /* Main.storyboard in Resources */,
 				2C711D7127F34DB60048C6E1 /* CurrentState_Main.storyboard in Resources */,
 				2C711D7927F36D200048C6E1 /* CSFocusView.xib in Resources */,
@@ -948,6 +968,7 @@
 				D68A73502820ECEA003AD984 /* RSTableViewCell.swift in Sources */,
 				D68A733D2820ECEA003AD984 /* ScrapFirstVC.swift in Sources */,
 				D68A734A2820ECEA003AD984 /* MenuCell_JOL.swift in Sources */,
+				D6DD12EF2827F4250064024A /* ReAlaCell.swift in Sources */,
 				D6DFDA552812C68700609973 /* ChatResearchDetail.swift in Sources */,
 				D6DE3ABE2742B69E0006A45E /* JobSelect_jobofferwrite.swift in Sources */,
 				D629489A27567EC400D50DF1 /* SearchingVCViewController.swift in Sources */,
@@ -968,6 +989,7 @@
 				D68A73572820ECEA003AD984 /* MenuCell_RS.swift in Sources */,
 				D68A73472820ECEA003AD984 /* JobOfferList.swift in Sources */,
 				D68A736E2820ECF9003AD984 /* JOLTableViewCell.swift in Sources */,
+				D6DD12F12827F94E0064024A /* homeitems.swift in Sources */,
 				D68A734C2820ECEA003AD984 /* JobOfferInfo.swift in Sources */,
 				D6548010281FF5A1005214F6 /* ContractWriteView.swift in Sources */,
 				D693DC1B27491F0A0064FA98 /* MapLocationFind.swift in Sources */,
@@ -1034,6 +1056,7 @@
 				D68A734F2820ECEA003AD984 /* ReviewTableViewCell.swift in Sources */,
 				D697A92B27EDEAEA0004B34B /* HomeContentTableView1.swift in Sources */,
 				D68A73402820ECEA003AD984 /* MenuCell_ReviewVC.swift in Sources */,
+				D6DD12ED2827F4040064024A /* HomeReAla.swift in Sources */,
 				D68A734E2820ECEA003AD984 /* MenuCell_RO.swift in Sources */,
 				D6ACBC9827F869DF00A47EB3 /* ItemModel.swift in Sources */,
 				D611C1A1275E7BEB0038A5E3 /* item2ViewController.swift in Sources */,
@@ -1044,6 +1067,7 @@
 				2CE199982767662300399CB6 /* DetailViewController2.swift in Sources */,
 				D6E20AC62740105500E4498C /* JobOfferWrite.swift in Sources */,
 				D67BE0D6279532F7005F2CB9 /* HomeOfferMain.swift in Sources */,
+				D6DD12EB2827F3B20064024A /* HomeAlarmViewController.swift in Sources */,
 				D68A73582820ECEA003AD984 /* JobSearchList.swift in Sources */,
 				D67B88E928216F19001084E7 /* EmployContractTableViewCell2.swift in Sources */,
 				D62748E5273ABB580006B9FA /* SceneDelegate.swift in Sources */,

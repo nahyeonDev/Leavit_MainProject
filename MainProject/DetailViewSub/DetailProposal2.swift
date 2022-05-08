@@ -28,6 +28,7 @@ class DetailProposal2: UIViewController {
     @IBOutlet weak var nameTitle: UILabel! //이름
     @IBOutlet weak var uInfoTitle: UILabel!  //나이성별지역
     @IBOutlet weak var emailTitle: UILabel!  //이메일
+    @IBOutlet weak var backBtn: UIButton!
     
     
     var userId: String? //유저 uid
@@ -39,12 +40,21 @@ class DetailProposal2: UIViewController {
     
     let uiEmail = Auth.auth().currentUser!.email
     
+    var email2 : String? //상대이메일
+    var ref: DatabaseReference!
+    
+    var userName1 : String?
+    var userName2 : String?
+    var userLoc1 : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         offerWriteInfo()
         userInfo()
+        
+        mainTitle.text = uTitle
     }
     @IBAction func clickFinal(_ sender: UIButton) {
         
@@ -60,19 +70,14 @@ class DetailProposal2: UIViewController {
     
     //닫기 기능
     @IBAction func goBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //디폴트로 배치되는 뒤로가기 버튼 삭제
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-        if let user = userId {
-            self.userId = user
-            print(userId! as String)
-        }
-        if let title = uTitle{
-            self.mainTitle.text = title
-        }
+        super.viewWillAppear(animated)
+       self.navigationItem.hidesBackButton = true
+       backBtn.addTarget(self, action: #selector(goBack(_:)), for:.touchUpInside)
     }
     
     func offerWriteInfo(){
@@ -115,15 +120,77 @@ class DetailProposal2: UIViewController {
         }
     }
     
-    //segue가 진행되기전에 준비하는 함수
-        //DetailProposal에게 데이터 넘긴다
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            if segue.identifier == "detailFinish2" {
-                let vc = segue.destination as? FinishProposal2
-                vc?.loc2 = mainTitle.text
-                vc?.money2 = moneyTitle.text
-                vc?.time2 = timeTitle.text
+    @IBAction func goSupport(_ sender: Any) {
+        ref = Database.database().reference()
+        
+        //구직하는 입장(현재 사용자) ResearchMessage+이메일(현재사용자)
+        let email = (FirebaseAuth.Auth.auth().currentUser?.email)
+        let email1 = email!.components(separatedBy: ["@", "."]).joined()
+        let mainL = "ResearchMessage" + email1
+        let mainL2 = "Support" + email1
+        
+        let docRef1 = db.collection("가입개인정보").document(email2!)
+        
+        docRef1.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data() as [String: AnyObject]?
+                let obName1 = dataDescription?["이름"] as! String
+                self.userName2 = obName1
+                
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이메일").setValue(self.email2)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이름").setValue(self.userName2!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글제목").setValue(self.mainTitle.text!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("글uid").setValue(self.userId!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글시급").setValue(self.moneyTitle.text!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글기간").setValue(self.timeTitle.text!)
+                
+                self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("상대방이메일").setValue(self.email2!)
+                self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("글uid").setValue(self.userId!)
+                self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("글제목").setValue(self.mainTitle.text!)
+ 
+            } else {
+                print("Document does not exist")
             }
         }
+        
+        //구인하는 입장(글 작성자) OfferMessage+이메일(글 작성자)
+        let email2 = email2!.components(separatedBy: ["@", "."]).joined()
+        let mainR = "OfferMessage" + email2
+        print(mainR)
+        let docRef2 = db.collection("가입개인정보").document(email!)
+        let mainR2 = "Support" + email2
+        
+        docRef2.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data() as [String: AnyObject]?
+                let obName = dataDescription?["이름"] as! String
+                let obLoc = dataDescription?["위치"] as! String
+                self.userName1 = obName
+                self.userLoc1 = obLoc
+                
+                self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("상대방이메일").setValue(email)
+                self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자이름").setValue(self.userName1!)
+                self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("글uid").setValue(self.userId!)
+                self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자시간").setValue("시간")
+                self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자지역").setValue(self.userLoc1)
+                self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("글제목").setValue(self.mainTitle.text!)
+ 
+                self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("상대방이메일").setValue(email)
+                self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("글uid").setValue(self.userId!)
+                self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("지원자이름").setValue(self.userName1!)
+                self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("글제목").setValue(self.mainTitle.text!)
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+        
+        guard let contVC2 = self.storyboard?.instantiateViewController(withIdentifier: "FinishProposal2") as? FinishProposal2 else { return }
+        contVC2.loc2 = mainTitle.text
+        contVC2.money2 = moneyTitle.text
+        contVC2.time2 = timeTitle.text
+        self.navigationController?.pushViewController(contVC2, animated: true)
+        
+    }
 
 }

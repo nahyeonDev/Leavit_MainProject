@@ -9,6 +9,7 @@ import UIKit
 import FSPagerView
 import Firebase
 import FirebaseDatabase
+import FirebaseFirestore
 
 
 class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelegate {
@@ -87,6 +88,7 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
     @IBOutlet weak var careerTxt: UITextField!
     //이메일(내)
     @IBOutlet weak var myEmail: UILabel!
+    @IBOutlet weak var backBtn: UIButton!
     
     //태그
     var tagTotal: String?
@@ -179,13 +181,11 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let user = userId {
-            self.userId = user
-        }
-        
+        self.navigationItem.hidesBackButton = true
+        backBtn.addTarget(self, action: #selector(delPage(_:)), for:.touchUpInside)
     }
     @IBAction func delPage(_ sender: UIButton) {
-        self.presentingViewController?.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - FSPagerView Datasource
@@ -240,18 +240,18 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
                 let dataDescription = document.data() as [String: AnyObject]?
                 let obName1 = dataDescription?["이름"] as! String
                 self.userName2 = obName1
+                
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이메일").setValue(self.myEmail.text!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이름").setValue(self.userName2!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글제목").setValue(self.mainTitle.text!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("글uid").setValue(self.userId!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글시급").setValue(self.payTitle.text!)
+                self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글기간").setValue(time)
  
             } else {
                 print("Document does not exist")
             }
         }
-        
-        self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이메일").setValue(myEmail.text!)
-        self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이름").setValue(userName2!)
-        self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글제목").setValue(mainTitle.text!)
-        self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("글uid").setValue(userId!)
-        self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글시급").setValue(payTitle.text!)
-        self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("지원글기간").setValue(time)
         
         //구인하는 입장(글 작성자) OfferMessage+이메일(글 작성자)
         let email2 = myEmail.text!.components(separatedBy: ["@", "."]).joined()
@@ -272,23 +272,14 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
             }
         }
 
-        self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("상대방이메일").setValue(email)
-        self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자이름").setValue(userName1!)
-        self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("글uid").setValue(userId!)
-        self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자시간").setValue("시간")
-        self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자지역").setValue(userLoc1)
-        self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("글제목").setValue(mainTitle.text!)
     }
     
-    
-    //segue가 진행되기전에 준비하는 함수
-        //DetailProposal에게 데이터 넘긴다
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            if segue.identifier == "detailSub2" {
-                let vc = segue.destination as? DetailProposal2
-                vc?.userId = userId
-                vc?.uTitle = mainTitle.text
-            }
-        }
+    @IBAction func goSupportMain(_ sender: UIButton) {
+        guard let contVC2 = self.storyboard?.instantiateViewController(withIdentifier: "DetailProposal2") as? DetailProposal2 else { return }
+        contVC2.userId = userId
+        contVC2.uTitle = mainTitle.text
+        contVC2.email2 = myEmail.text
+        self.navigationController?.pushViewController(contVC2, animated: true)
+    }
     
 }

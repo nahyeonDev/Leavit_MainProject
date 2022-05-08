@@ -44,7 +44,7 @@ class HomeViewDetail: UIViewController{
         CurrentUser()
     }
     override func viewWillAppear(_ animated: Bool) {
-        CurrentUser()
+        
     }
     @IBAction func clickBtn(_ sender: UIButton) {
         if(check==true){
@@ -86,4 +86,10 @@ class HomeViewDetail: UIViewController{
         }
 
     }
+    
+    @IBAction func goAlarmPage(_ sender: UIButton) {
+        guard let contVC2 = self.storyboard?.instantiateViewController(withIdentifier: "HomeAlarmViewController") as? HomeAlarmViewController else { return }
+        self.navigationController?.pushViewController(contVC2, animated: true)
+    }
+    
 }

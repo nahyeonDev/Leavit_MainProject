@@ -96,17 +96,8 @@ class item2ViewController: UIViewController , UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //정보 전달 : indexPath.row
-        performSegue(withIdentifier: "detailView", sender: indexPath.row)
+        guard let contVC2 = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        contVC2.userId = userList[indexPath.row].uid
+        self.navigationController?.pushViewController(contVC2, animated: true)
     }
-    
-    //segue가 진행되기전에 준비하는 함수
-        //DetailViewContorller에게 데이터 넘긴다
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            if segue.identifier == "detailView" {
-                let vc = segue.destination as? DetailViewController
-                if let index = sender as? Int{
-                    vc?.userId = userList[index].uid
-                }
-            }
-        }
 }

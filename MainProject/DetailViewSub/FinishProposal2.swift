@@ -31,7 +31,7 @@ class FinishProposal2: UIViewController {
     }
     
     @IBAction func backBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //디폴트로 배치되는 뒤로가기 버튼 삭제
@@ -49,15 +49,13 @@ class FinishProposal2: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func okFinBtn(_ sender: UIButton) {
+        guard let viewControllerStack = self.navigationController?.viewControllers else { return }
+        for viewController in viewControllerStack {
+          if let bView = viewController as? DetailViewController {
+            self.navigationController?.popToViewController(bView, animated: true)
+            }
+        }
     }
-    */
 
 }
