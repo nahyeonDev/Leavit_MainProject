@@ -14,6 +14,8 @@ class ReAlaCell: UITableViewCell {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var okBtn: UIButton!
     
+    @IBOutlet weak var cBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,4 +27,6 @@ class ReAlaCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+
 }
+

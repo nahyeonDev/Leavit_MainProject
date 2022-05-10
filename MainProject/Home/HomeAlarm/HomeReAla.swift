@@ -10,9 +10,12 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class HomeReAla: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeReAla: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
     
     var itemOffer: DatabaseReference!
+    var itemSearch: DatabaseReference!
+    var ref: DatabaseReference!
     @IBOutlet weak var myTableView: UITableView!
     
     var itemList = [AlarmModel1]()
@@ -27,7 +30,7 @@ class HomeReAla: UIViewController, UITableViewDelegate, UITableViewDataSource {
         myTableView.dataSource = self
         
         let email1 = email!.components(separatedBy: ["@", "."]).joined()
-        let mainT = "Support" + email1
+        let mainT = "Offer" + email1
         
         itemOffer = Database.database().reference().child("Support글지원").child(email1).child(mainT)
         
@@ -73,5 +76,29 @@ class HomeReAla: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //정보 전달 : indexPath.row
+        let email1 = email!.components(separatedBy: ["@", "."]).joined()
+        ref = Database.database().reference().child("MainIng").child("offer").child(email1).child("post")
+        ref.updateChildValues(["접수완료": "yes"])
+        
+        itemOffer = Database.database().reference().child("MainIng").child("offer").child(email1)
+        
+        itemOffer.observe(DataEventType.value, with:{(snapshot) in
+            if snapshot.childrenCount>0{
+                for MainIng in snapshot.children.allObjects as![DataSnapshot]{
+                    let itemObjects = MainIng.value as? [String: AnyObject]
+                    
+                    let obuser = itemObjects?["지원자이메일"] as! String
+                    
+                    let email2 = obuser.components(separatedBy: ["@", "."]).joined()
+                    
+                    print(email2)
+                    
+                    self.itemSearch = Database.database().reference().child("MainIng").child("search").child(email2).child("post")
+                    
+                    self.itemSearch.updateChildValues(["접수완료": "yes"])
+                }
+            }
+            
+        })
     }
 }

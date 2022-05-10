@@ -20,12 +20,20 @@ class HomeViewDetail: UIViewController{
     @IBOutlet weak var subView2: UIView!
     @IBOutlet weak var topMenu: UIImageView!
     @IBOutlet weak var topBtn: UIImageView!
+    @IBOutlet weak var backColorImg: UIImageView!
+    @IBOutlet weak var homeLogoImg: UIImageView!
+    
     
     @IBOutlet weak var nameTitle: UILabel! //사용자 이름
     
     var check = false
     let uEmail = Auth.auth().currentUser!.email
     let db = Firestore.firestore()
+    
+    var mainSearch : DatabaseReference!
+    var mainOffer : DatabaseReference!
+    @IBOutlet weak var mainIngView: UIView!
+    @IBOutlet weak var subMainView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +52,55 @@ class HomeViewDetail: UIViewController{
         CurrentUser()
     }
     override func viewWillAppear(_ animated: Bool) {
+        let mEmail = uEmail!.components(separatedBy: ["@", "."]).joined()
+        mainSearch = Database.database().reference().child("MainIng").child("search").child(mEmail)
         
-    }
+        mainSearch.observe(DataEventType.value, with:{(snapshot) in
+            if snapshot.childrenCount>0{
+                for MainIng in snapshot.children.allObjects as![DataSnapshot]{
+                    let itemObjects = MainIng.value as? [String: AnyObject]
+                    
+                    let oksign = itemObjects?["접수완료"] as! String
+                    if(oksign == "yes"){
+                        self.subMainView.transform = CGAffineTransform(translationX: 0, y: 159)
+                        
+                    }
+                    else{
+                        self.subMainView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    }
+                }
+            }
+            
+        })
+   
+        mainOffer = Database.database().reference().child("MainIng").child("offer").child(mEmail)
+        
+        mainOffer.observe(DataEventType.value, with:{(snapshot) in
+            if snapshot.childrenCount>0{
+                for MainIng in snapshot.children.allObjects as![DataSnapshot]{
+                    let itemObjects = MainIng.value as? [String: AnyObject]
+                    
+                    let oksign = itemObjects?["접수완료"] as! String
+                    if(oksign == "yes"){
+                        self.subMainView.transform = CGAffineTransform(translationX: 0, y: 159)
+                        
+                    }
+                    else{
+                        self.subMainView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    }
+                }
+            }
+            
+        })
+}
     @IBAction func clickBtn(_ sender: UIButton) {
         if(check==true){
             UIView.animate(withDuration: 0.5, animations: {
                 self.topMenu.transform = CGAffineTransform(translationX: 0, y: 0)
             })
             topBtn.image("optionSearch.png")
+            backColorImg.image("image424.png")
+            homeLogoImg.image("homelogoPurple.png")
             subView1.isHidden = true
             subView2.isHidden = false
             check = false;
@@ -63,6 +112,8 @@ class HomeViewDetail: UIViewController{
                 self.topMenu.transform = CGAffineTransform(translationX: 162.0, y: 0)
             })
             topBtn.image("hoptionSearch2.png")
+            backColorImg.image("image425.png")
+            homeLogoImg.image("homelogoRed.png")
             subView1.isHidden = false
             subView2.isHidden = true
             check = true;

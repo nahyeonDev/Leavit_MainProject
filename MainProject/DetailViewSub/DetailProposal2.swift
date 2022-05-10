@@ -127,7 +127,7 @@ class DetailProposal2: UIViewController {
         let email = (FirebaseAuth.Auth.auth().currentUser?.email)
         let email1 = email!.components(separatedBy: ["@", "."]).joined()
         let mainL = "ResearchMessage" + email1
-        let mainL2 = "Support" + email1
+        let mainL2 = "Search" + email1
         
         let docRef1 = db.collection("가입개인정보").document(email2!)
         
@@ -147,6 +147,15 @@ class DetailProposal2: UIViewController {
                 self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("상대방이메일").setValue(self.email2!)
                 self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("글uid").setValue(self.userId!)
                 self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("글제목").setValue(self.mainTitle.text!)
+                //메인화면에 나타남.
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("글제목").setValue(self.mainTitle.text!)
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("글uid").setValue(self.userId!)
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("접수완료").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("근무지출발").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("근무지도착").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("퇴근").setValue("x")
+                
+                
  
             } else {
                 print("Document does not exist")
@@ -158,7 +167,7 @@ class DetailProposal2: UIViewController {
         let mainR = "OfferMessage" + email2
         print(mainR)
         let docRef2 = db.collection("가입개인정보").document(email!)
-        let mainR2 = "Support" + email2
+        let mainR2 = "Offer" + email2
         
         docRef2.getDocument { (document, error) in
             if let document = document, document.exists {
@@ -180,6 +189,13 @@ class DetailProposal2: UIViewController {
                 self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("지원자이름").setValue(self.userName1!)
                 self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("글제목").setValue(self.mainTitle.text!)
                 
+                //메인화면에 나타남.
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("글제목").setValue(self.mainTitle.text!)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("글uid").setValue(self.userId!)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("접수완료").setValue("x")
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("지원자이름").setValue(self.userName1!)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("지원자이메일").setValue(email)
+
             } else {
                 print("Document does not exist")
             }
