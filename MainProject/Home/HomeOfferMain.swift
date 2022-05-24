@@ -63,9 +63,10 @@ class HomeOfferMain: UIViewController {
                 for MainIng in snapshot.children.allObjects as![DataSnapshot]{
                     let itemObjects = MainIng.value as? [String: AnyObject]
                     
-                    let oksign = itemObjects?["접수완료"] as! String
-                    let yemail = itemObjects?["지원자이메일"] as! String
-                    let yname = itemObjects?["지원자이름"] as! String
+                    let oksign = itemObjects?["접수완료"] as? String ?? ""
+                    let yemail = itemObjects?["지원자이메일"] as? String ?? ""
+                    let yname = itemObjects?["지원자이름"] as? String ?? ""
+                    let okreview = itemObjects?["구인리뷰"] as? String ?? ""
                     
                     self.mainName.text = yname
                     
@@ -80,6 +81,12 @@ class HomeOfferMain: UIViewController {
                         self.AllView.isHidden = true
                         self.startView2.isHidden = false
                         self.AllView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    }
+                    
+                    if(okreview == "yes"){
+                        self.reviewBtn.isHidden = true
+                    }
+                    else{
                     }
                     
                     let email1 = yemail.components(separatedBy: ["@", "."]).joined()
@@ -132,6 +139,17 @@ class HomeOfferMain: UIViewController {
             }
             
         })
+        
+    }
+    
+    @IBAction func goReviewPage(_ sender: UIButton) {
+        //storyboard를 통해 두번쨰 화면의 storyboard ID를 참조하여 뷰 컨트롤러를 가져옵니다.
+            guard let svc = self.storyboard?.instantiateViewController(withIdentifier: "HomeReviewOffer") else {
+                return
+            }
+            
+            //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
+            self.present(svc, animated: true)
         
     }
 

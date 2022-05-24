@@ -5,14 +5,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.538334446081-o7eo4jchgklp6rn85i9ihs9ohb02tah2</string>
-			</array>
+			<key>CFBundleURLName</key>
+			<string></string>
 		</dict>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict/>
 	<key>NMFClientId</key>
 	<string>9gvtn0moh4</string>
 	<key>UIAppFonts</key>
@@ -45,6 +43,7 @@
 	</dict>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
 </dict>

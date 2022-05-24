@@ -102,6 +102,8 @@ class ChatOfferDetail: UIViewController,UITableViewDataSource, UITableViewDelega
         garlleryLabel.isHidden = true
         cameraBtn.isHidden = true
         camerLabel.isHidden = true
+        contractBtn.isHidden = true
+        contractLabel.isHidden = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

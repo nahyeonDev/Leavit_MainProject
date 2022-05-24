@@ -10,8 +10,9 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
-class ContractWriteView: UIViewController {
+class ContractWriteView: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var mainView: UIView!
     //구인자 정보
     @IBOutlet weak var nameTitle1: UITextField!
     @IBOutlet weak var birthTitle1: UITextField!
@@ -48,8 +49,31 @@ class ContractWriteView: UIViewController {
         myInfo()
         yourInfo()
         workInfo()
-        
+        NotificationCenter.default.addObserver(self,
+                                                selector: #selector(keyboardWillHide(_:)),
+                                                name: UIResponder.keyboardWillHideNotification,
+                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                                selector: #selector(keyboardWillShow(_:)),
+                                                name: UIResponder.keyboardWillShowNotification,
+                                                object: nil)
         cwhideKeyboard()
+    }
+    
+    //키보드 올라갔다는 알림을 받으면 실행되는 메서드
+    @objc func keyboardWillShow(_ sender:Notification){
+            self.mainView.frame.origin.y = -200
+    }
+    //키보드 내려갔다는 알림을 받으면 실행되는 메서드
+    @objc func keyboardWillHide(_ sender:Notification){
+            self.mainView.frame.origin.y = 0
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.timeTitle.delegate = self
+        self.locTitle.delegate = self
+        self.contentTitle.delegate = self
+        self.detailTimeTitle.delegate = self
+        self.moneyTitle.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {

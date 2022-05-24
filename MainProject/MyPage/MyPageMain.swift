@@ -8,8 +8,11 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseDatabase
 
-class MyPageMain: UIViewController {
+class MyPageMain: UIViewController{
+
+    
     @IBOutlet weak var content1: UIView! //구직뷰
     @IBOutlet weak var content2: UIView! //구인뷰
     @IBOutlet weak var mainview: UIView!
@@ -18,25 +21,16 @@ class MyPageMain: UIViewController {
     @IBOutlet weak var nameTitle: UILabel!
     let db = Firestore.firestore()
     let uEmail = Auth.auth().currentUser!.email
+    var ref : DatabaseReference!
     
     //스크랩버튼
     @IBOutlet weak var scrapBtn: UIButton!
     //리뷰버튼
     @IBOutlet weak var reviewBtn: UIButton!
     
-    //SearchBtn
-    @IBOutlet weak var resumeBtn_Search: UIButton! //이력서 작성 버튼
-    @IBOutlet weak var jobSearchListBtn: UIButton!
-    @IBOutlet weak var recommendationSearchBtn: UIButton!
-    @IBOutlet weak var employContractSearchBtn: UIButton!
-    
-    //OfferBtn
-    @IBOutlet weak var jobOfferInfo: UIButton! //구인정보 버튼
-    @IBOutlet weak var jobOfferListBtn: UIButton!
-    @IBOutlet weak var recommendationOfferBtn: UIButton!
-    @IBOutlet weak var employContractOfferBtn: UIButton!
-    
     var click = false
+
+    @IBOutlet weak var moneyTitle2: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,17 +51,7 @@ class MyPageMain: UIViewController {
         //MyPage_MainMenu_Btn
         scrapBtn?.addTarget(self, action: #selector(tapScrapBtn), for: .touchUpInside)
         reviewBtn?.addTarget(self, action: #selector(tapReviewBtn), for: .touchUpInside)
-        
-        //SearchBtn
-        resumeBtn_Search?.addTarget(self, action: #selector(tapResumeSearchBtn), for: .touchUpInside)
-        jobSearchListBtn?.addTarget(self, action: #selector(tapSearchListBtn), for: .touchUpInside)
-        recommendationSearchBtn?.addTarget(self, action: #selector(tapRecommendationSearchBtn), for: .touchUpInside)
-        employContractSearchBtn?.addTarget(self, action: #selector(tapEmployContractSearchBtn), for: .touchUpInside)
-        //OfferBtn
-        jobOfferInfo?.addTarget(self, action: #selector(tapJobOfferInfoBtn), for: .touchUpInside)
-        jobOfferListBtn?.addTarget(self, action: #selector(tapJobOfferListBtn), for: .touchUpInside)
-        recommendationOfferBtn?.addTarget(self, action: #selector(tapRecommendationOfferBtn), for: .touchUpInside)
-        employContractOfferBtn?.addTarget(self, action: #selector(tapEmployContractOfferBtn), for: .touchUpInside)
+
     }
     
     //MyPage_MainMenu_Btn
@@ -81,66 +65,6 @@ class MyPageMain: UIViewController {
         if let controller = self.storyboard?.instantiateViewController(identifier: "ReviewVC") {
              self.navigationController?.pushViewController(controller, animated: true)
              print("Go to Review screen!")
-        }
-    }
-    
-    //SearchMenu
-    @objc func tapResumeSearchBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "ResumeSearch") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to Resume screen!")
-        }
-    }
-    @objc func tapSearchListBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "JobSearchList") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to Resume screen!")
-        }
-    }
-    @objc func tapRecommendationSearchBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "Recommendation_Search") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to Resume screen!")
-        }
-    }
-    @objc func tapEmployContractSearchBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "EmployContract_Search") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to Resume screen!")
-        }
-    }
-    
-    //OfferMenu
-    @objc func tapJobOfferInfoBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "JobOfferInfo") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to JobOfferInfo screen!")
-        }
-    }
-    @objc func tapJobOfferListBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "JobOfferList") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to JobOfferInfo screen!")
-        }
-    }
-    @objc func tapRecommendationOfferBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "Recommendation_Offer") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to JobOfferInfo screen!")
-        }
-    }
-    @objc func tapEmployContractOfferBtn(){
-        if let controller = self.storyboard?.instantiateViewController(identifier: "EmployContract_Offer") {
-             self.navigationController?.pushViewController(controller, animated: true)
-             //self.view.addSubview(controller.view)
-             print("Go to JobOfferInfo screen!")
         }
     }
     
@@ -186,5 +110,8 @@ class MyPageMain: UIViewController {
             }
         }
     }
-    
 }
+
+
+        
+

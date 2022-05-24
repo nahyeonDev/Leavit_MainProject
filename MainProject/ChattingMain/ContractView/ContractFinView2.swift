@@ -39,7 +39,7 @@ class ContractFinView2: UIViewController {
         nameTitle1.text = name1
         nameTitle2.text = name2
         
-        contentChat = "[알림] " + myName! + "이 계약서 사인을 완료했습니다."
+        contentChat = "[알림] " + myName! + "님이 계약서 사인을 완료했습니다."
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

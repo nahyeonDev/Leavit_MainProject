@@ -217,6 +217,7 @@ class JobOfferWrite: UIViewController, UICollectionViewDelegate, UICollectionVie
         self.ref.child("구인글작성").child(userID).child("태그2").setValue(fullTagArr[1])
         self.ref.child("구인글작성").child(userID).child("태그3").setValue(fullTagArr[2])
         self.ref.child("구인글작성").child(userID).child("상세글").setValue(deTxt)
+        self.ref.child("구인글작성").child(userID).child("이메일").setValue(uEmail)
         
         //구인글 리스트뷰 파이어베이스 정보
         self.ref.child("구인리스트").child(userID).child("글제목").setValue(myTitle)
@@ -228,6 +229,16 @@ class JobOfferWrite: UIViewController, UICollectionViewDelegate, UICollectionVie
         self.ref.child("구인리스트").child(userID).child("태그2").setValue(fullTagArr[1])
         self.ref.child("구인리스트").child(userID).child("태그3").setValue(fullTagArr[2])
         self.ref.child("구인리스트").child(userID).child("리스트연결").setValue(userID)
+        
+        self.ref.child("구인리스트지도").child(userID).child("post").child("글제목").setValue(myTitle)
+        self.ref.child("구인리스트지도").child(userID).child("post").child("근무요일시간").setValue(fullHowArr[0]+fullHowArr[1])
+        self.ref.child("구인리스트지도").child(userID).child("post").child("근무지").setValue(locTxt)
+        self.ref.child("구인리스트지도").child(userID).child("post").child("지급방법").setValue(fullHowArr[2])
+        self.ref.child("구인리스트지도").child(userID).child("post").child("지급요금").setValue(fullHowArr[3])
+        self.ref.child("구인리스트지도").child(userID).child("post").child("태그1").setValue(fullTagArr[0])
+        self.ref.child("구인리스트지도").child(userID).child("post").child("태그2").setValue(fullTagArr[1])
+        self.ref.child("구인리스트지도").child(userID).child("post").child("태그3").setValue(fullTagArr[2])
+        self.ref.child("구인리스트지도").child(userID).child("post").child("리스트연결").setValue(userID)
         
         //구인글연결(근로) 파이어베이스
         self.ref.child("구인글연결(근로)").child(userID).child("post").child("글제목").setValue(myTitle)

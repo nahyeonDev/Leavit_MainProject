@@ -90,6 +90,8 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
     @IBOutlet weak var myEmail: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
+    @IBOutlet weak var mainLocText: UITextField!
+    
     //태그
     var tagTotal: String?
     var splitArr2: Array<String>?
@@ -139,7 +141,8 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
                     let day = value["근무요일"] as! String
                     let time = value["근무시간"] as! String
                     let detail = value["상세글"] as! String
-                    let url = value["근무지"] as! String
+                    let url = value["매장url"] as! String
+                    let loc = value["근무지"] as! String
                     let job = value["업직종"] as! String
                     let career = value["자격요건"] as! String
                     let certif = value["자격요건"] as! String
@@ -159,7 +162,7 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
             
             self.detailTxt.text = items.detail
             
-            self.urlText.setTitle(items.url, for: .normal)
+            self.mainLocText.text = loc
             self.careerTxt.text = items.career
             self.certificateTxt.text = items.certif
             
@@ -217,7 +220,7 @@ class DetailViewController: UIViewController, FSPagerViewDataSource, FSPagerView
     
 
     @IBAction func mapUrlBtn(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string:"https://m.place.naver.com/restaurant/34356181/home")!
+        UIApplication.shared.open(URL(string:"https://m.place.naver.com/restaurant/1221245848/photo")!
                                   as URL, options: [:], completionHandler: nil)
     }
     

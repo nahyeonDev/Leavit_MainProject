@@ -53,12 +53,22 @@
 		D62948A02756807500D50DF1 /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629489F2756807500D50DF1 /* SearchingViewController.swift */; };
 		D63317492808264500DDA825 /* CertificateMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63317482808264500DDA825 /* CertificateMainView.swift */; };
 		D6340ADA280C5FF6007AEA6B /* LocModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6340AD9280C5FF5007AEA6B /* LocModel.swift */; };
+		D639893A2836C51900EA38E4 /* MyPage_ChargeMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63989392836C51900EA38E4 /* MyPage_ChargeMain.storyboard */; };
+		D639893C2836C54000EA38E4 /* MainChargeMyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639893B2836C54000EA38E4 /* MainChargeMyPage.swift */; };
 		D63DBFEE27DF21AB000872E2 /* Password_init.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63DBFED27DF21AB000872E2 /* Password_init.swift */; };
 		D63DBFF027DF21E3000872E2 /* SignUpDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63DBFEF27DF21E3000872E2 /* SignUpDetail.swift */; };
+		D646CA82282FEDDB005149A3 /* Pods_MainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3A05376031B8074AA17BBA /* Pods_MainProject.framework */; };
+		D646F401282EB8ED00A44E95 /* CustomAlterCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646F400282EB8ED00A44E95 /* CustomAlterCheck.swift */; };
+		D646F403282EBB2B00A44E95 /* HomeReviewOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646F402282EBB2B00A44E95 /* HomeReviewOffer.swift */; };
+		D646F405282EBD7100A44E95 /* HomeMainAlarmOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646F404282EBD7100A44E95 /* HomeMainAlarmOf.swift */; };
+		D646F407282EC23400A44E95 /* JobOfferLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D646F406282EC23400A44E95 /* JobOfferLoadView.swift */; };
 		D64EEDF7280EF155009BFA3E /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64EEDF6280EF155009BFA3E /* MessageModel.swift */; };
 		D6548010281FF5A1005214F6 /* ContractWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654800F281FF5A1005214F6 /* ContractWriteView.swift */; };
 		D654801228201C11005214F6 /* ContractMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654801128201C10005214F6 /* ContractMainView.swift */; };
 		D65480142820252E005214F6 /* ContractFinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65480132820252E005214F6 /* ContractFinView.swift */; };
+		D656B60D282F47C100A26360 /* leavit_nobg_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = D656B60C282F47BC00A26360 /* leavit_nobg_gif.gif */; };
+		D656B60F282F49DA00A26360 /* gitLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656B60E282F49DA00A26360 /* gitLoader.swift */; };
+		D656B611282F505700A26360 /* MyMainCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656B610282F505600A26360 /* MyMainCheckView.swift */; };
 		D656FD0B2743D6C600EDD4C3 /* JobTag_jobofferwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656FD0A2743D6C600EDD4C3 /* JobTag_jobofferwrite.swift */; };
 		D656FD0D2743DEA000EDD4C3 /* JobSelect_jobsearchwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656FD0C2743DEA000EDD4C3 /* JobSelect_jobsearchwrite.swift */; };
 		D656FD0F2743E08800EDD4C3 /* JobLocation_jobsearchwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656FD0E2743E08800EDD4C3 /* JobLocation_jobsearchwrite.swift */; };
@@ -66,6 +76,9 @@
 		D65CDE5227EC930300A38149 /* locationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65CDE5127EC930300A38149 /* locationView.swift */; };
 		D65E69D5280E917F00C58D26 /* JobLocation_jobofferwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E69D4280E917F00C58D26 /* JobLocation_jobofferwrite.swift */; };
 		D65E69D7280E9DFF00C58D26 /* MarkerInfoWindow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E69D6280E9DFF00C58D26 /* MarkerInfoWindow2.swift */; };
+		D65EB2422832214700E5775A /* MyPage_Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65EB2412832214700E5775A /* MyPage_Payment.storyboard */; };
+		D65EB244283253FA00E5775A /* MyPageMainRe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EB243283253FA00E5775A /* MyPageMainRe.swift */; };
+		D65EB2462832540C00E5775A /* MyPageMainOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65EB2452832540C00E5775A /* MyPageMainOff.swift */; };
 		D65F379727FB3489001DF0A1 /* DetailViewSub2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65F379627FB3489001DF0A1 /* DetailViewSub2.storyboard */; };
 		D65F379927FB3A1D001DF0A1 /* DetailProposal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65F379827FB3A1D001DF0A1 /* DetailProposal2.swift */; };
 		D65F379B27FB3BF3001DF0A1 /* FinishProposal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65F379A27FB3BF3001DF0A1 /* FinishProposal2.swift */; };
@@ -76,6 +89,7 @@
 		D66F9BF7280EE2C60062375D /* ChatOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F9BF5280EE2C60062375D /* ChatOfferDetail.swift */; };
 		D66F9BFB280EE3AA0062375D /* OfferChatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F9BF9280EE3AA0062375D /* OfferChatting.swift */; };
 		D66F9BFC280EE3AA0062375D /* OfferChatting.xib in Resources */ = {isa = PBXBuildFile; fileRef = D66F9BFA280EE3AA0062375D /* OfferChatting.xib */; };
+		D67078D0282B86EA00872FB3 /* HomeReviewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67078CF282B86EA00872FB3 /* HomeReviewSearch.swift */; };
 		D67B88E52821657E001084E7 /* EmployContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B88E42821657E001084E7 /* EmployContractTableViewCell.swift */; };
 		D67B88E728216782001084E7 /* ContractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B88E628216781001084E7 /* ContractModel.swift */; };
 		D67B88E928216F19001084E7 /* EmployContractTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B88E828216F19001084E7 /* EmployContractTableViewCell2.swift */; };
@@ -144,6 +158,9 @@
 		D697A92C27EDEAEA0004B34B /* HomeContentTableView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697A92A27EDEAEA0004B34B /* HomeContentTableView1.xib */; };
 		D697A92F27EDEF730004B34B /* HomeCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697A92D27EDEF730004B34B /* HomeCollectionViewCell1.swift */; };
 		D697A93027EDEF730004B34B /* HomeCollectionViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D697A92E27EDEF730004B34B /* HomeCollectionViewCell1.xib */; };
+		D69A39982830BB0300ADB29D /* OfferRemitPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A39972830BB0300ADB29D /* OfferRemitPay.swift */; };
+		D69A399A2830BBCD00ADB29D /* OfferRemitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A39992830BBCD00ADB29D /* OfferRemitDetail.swift */; };
+		D69A399C2830BC6400ADB29D /* OfferRemitFin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A399B2830BC6400ADB29D /* OfferRemitFin.swift */; };
 		D69A45B227413DDC00B17D6A /* JobSearchWrite_Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69A45B127413DDC00B17D6A /* JobSearchWrite_Main.storyboard */; };
 		D69A45B4274141F900B17D6A /* JopTime_jobofferwrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69A45B3274141F900B17D6A /* JopTime_jobofferwrite.swift */; };
 		D6A16A17282A143B00EE67C1 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6A16A10282A143600EE67C1 /* NotoSansKR-Medium.otf */; };
@@ -181,7 +198,6 @@
 		D6EA4BA52762462B00D86DF9 /* HomeOfferDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA4BA42762462B00D86DF9 /* HomeOfferDetail.swift */; };
 		D6EA4BA727624CAA00D86DF9 /* tagTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EA4BA627624CAA00D86DF9 /* tagTableViewCell1.swift */; };
 		D6F31ADA27F446D7000E06BA /* WriteAlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F31AD927F446D7000E06BA /* WriteAlterView.swift */; };
-		F0197C5F5B2CE20BE51E461F /* Pods_MainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3A05376031B8074AA17BBA /* Pods_MainProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -235,12 +251,21 @@
 		D629489F2756807500D50DF1 /* SearchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
 		D63317482808264500DDA825 /* CertificateMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateMainView.swift; sourceTree = "<group>"; };
 		D6340AD9280C5FF5007AEA6B /* LocModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocModel.swift; sourceTree = "<group>"; };
+		D63989392836C51900EA38E4 /* MyPage_ChargeMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage_ChargeMain.storyboard; sourceTree = "<group>"; };
+		D639893B2836C54000EA38E4 /* MainChargeMyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChargeMyPage.swift; sourceTree = "<group>"; };
 		D63DBFED27DF21AB000872E2 /* Password_init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_init.swift; sourceTree = "<group>"; };
 		D63DBFEF27DF21E3000872E2 /* SignUpDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetail.swift; sourceTree = "<group>"; };
+		D646F400282EB8ED00A44E95 /* CustomAlterCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlterCheck.swift; sourceTree = "<group>"; };
+		D646F402282EBB2B00A44E95 /* HomeReviewOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReviewOffer.swift; sourceTree = "<group>"; };
+		D646F404282EBD7100A44E95 /* HomeMainAlarmOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainAlarmOf.swift; sourceTree = "<group>"; };
+		D646F406282EC23400A44E95 /* JobOfferLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOfferLoadView.swift; sourceTree = "<group>"; };
 		D64EEDF6280EF155009BFA3E /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		D654800F281FF5A1005214F6 /* ContractWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractWriteView.swift; sourceTree = "<group>"; };
 		D654801128201C10005214F6 /* ContractMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractMainView.swift; sourceTree = "<group>"; };
 		D65480132820252E005214F6 /* ContractFinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractFinView.swift; sourceTree = "<group>"; };
+		D656B60C282F47BC00A26360 /* leavit_nobg_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leavit_nobg_gif.gif; sourceTree = "<group>"; };
+		D656B60E282F49DA00A26360 /* gitLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitLoader.swift; sourceTree = "<group>"; };
+		D656B610282F505600A26360 /* MyMainCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainCheckView.swift; sourceTree = "<group>"; };
 		D656FD0A2743D6C600EDD4C3 /* JobTag_jobofferwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTag_jobofferwrite.swift; sourceTree = "<group>"; };
 		D656FD0C2743DEA000EDD4C3 /* JobSelect_jobsearchwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSelect_jobsearchwrite.swift; sourceTree = "<group>"; };
 		D656FD0E2743E08800EDD4C3 /* JobLocation_jobsearchwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobLocation_jobsearchwrite.swift; sourceTree = "<group>"; };
@@ -248,6 +273,9 @@
 		D65CDE5127EC930300A38149 /* locationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationView.swift; sourceTree = "<group>"; };
 		D65E69D4280E917F00C58D26 /* JobLocation_jobofferwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobLocation_jobofferwrite.swift; sourceTree = "<group>"; };
 		D65E69D6280E9DFF00C58D26 /* MarkerInfoWindow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerInfoWindow2.swift; sourceTree = "<group>"; };
+		D65EB2412832214700E5775A /* MyPage_Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage_Payment.storyboard; sourceTree = "<group>"; };
+		D65EB243283253FA00E5775A /* MyPageMainRe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainRe.swift; sourceTree = "<group>"; };
+		D65EB2452832540C00E5775A /* MyPageMainOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMainOff.swift; sourceTree = "<group>"; };
 		D65F379627FB3489001DF0A1 /* DetailViewSub2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewSub2.storyboard; sourceTree = "<group>"; };
 		D65F379827FB3A1D001DF0A1 /* DetailProposal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProposal2.swift; sourceTree = "<group>"; };
 		D65F379A27FB3BF3001DF0A1 /* FinishProposal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishProposal2.swift; sourceTree = "<group>"; };
@@ -259,6 +287,7 @@
 		D66F9BF5280EE2C60062375D /* ChatOfferDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOfferDetail.swift; sourceTree = "<group>"; };
 		D66F9BF9280EE3AA0062375D /* OfferChatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferChatting.swift; sourceTree = "<group>"; };
 		D66F9BFA280EE3AA0062375D /* OfferChatting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferChatting.xib; sourceTree = "<group>"; };
+		D67078CF282B86EA00872FB3 /* HomeReviewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReviewSearch.swift; sourceTree = "<group>"; };
 		D67B88E42821657E001084E7 /* EmployContractTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployContractTableViewCell.swift; sourceTree = "<group>"; };
 		D67B88E628216781001084E7 /* ContractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractModel.swift; sourceTree = "<group>"; };
 		D67B88E828216F19001084E7 /* EmployContractTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployContractTableViewCell2.swift; sourceTree = "<group>"; };
@@ -328,6 +357,9 @@
 		D697A92A27EDEAEA0004B34B /* HomeContentTableView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeContentTableView1.xib; sourceTree = "<group>"; };
 		D697A92D27EDEF730004B34B /* HomeCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell1.swift; sourceTree = "<group>"; };
 		D697A92E27EDEF730004B34B /* HomeCollectionViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell1.xib; sourceTree = "<group>"; };
+		D69A39972830BB0300ADB29D /* OfferRemitPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRemitPay.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		D69A39992830BBCD00ADB29D /* OfferRemitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRemitDetail.swift; sourceTree = "<group>"; };
+		D69A399B2830BC6400ADB29D /* OfferRemitFin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRemitFin.swift; sourceTree = "<group>"; };
 		D69A45B127413DDC00B17D6A /* JobSearchWrite_Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobSearchWrite_Main.storyboard; sourceTree = "<group>"; };
 		D69A45B3274141F900B17D6A /* JopTime_jobofferwrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JopTime_jobofferwrite.swift; sourceTree = "<group>"; };
 		D6A16A10282A143600EE67C1 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
@@ -373,7 +405,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0197C5F5B2CE20BE51E461F /* Pods_MainProject.framework in Frameworks */,
+				D646CA82282FEDDB005149A3 /* Pods_MainProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,9 +579,19 @@
 			path = SearchViewMain;
 			sourceTree = "<group>";
 		};
+		D67078CC282B867800872FB3 /* HomeReview */ = {
+			isa = PBXGroup;
+			children = (
+				D67078CF282B86EA00872FB3 /* HomeReviewSearch.swift */,
+				D646F402282EBB2B00A44E95 /* HomeReviewOffer.swift */,
+			);
+			path = HomeReview;
+			sourceTree = "<group>";
+		};
 		D683F44C27A3F0A80045A7BF /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				D69A39962830BADC00ADB29D /* OfferPayment */,
 				D683F44D27A3F0EB0045A7BF /* MyPage_Main.storyboard */,
 				D68A73122820ECE8003AD984 /* ScrapFirstVC.swift */,
 				D68A73112820ECE7003AD984 /* ScrapSecondVC.swift */,
@@ -575,7 +617,11 @@
 				D68A73152820ECE8003AD984 /* MyPageMainMenu */,
 				D68A732A2820ECE9003AD984 /* SearchMenu */,
 				D68A731D2820ECE8003AD984 /* OfferMenu */,
+				D63989392836C51900EA38E4 /* MyPage_ChargeMain.storyboard */,
 				D683F44F27A3FFF20045A7BF /* MyPageMain.swift */,
+				D65EB243283253FA00E5775A /* MyPageMainRe.swift */,
+				D65EB2452832540C00E5775A /* MyPageMainOff.swift */,
+				D639893B2836C54000EA38E4 /* MainChargeMyPage.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -644,6 +690,17 @@
 			path = HomeContent1;
 			sourceTree = "<group>";
 		};
+		D69A39962830BADC00ADB29D /* OfferPayment */ = {
+			isa = PBXGroup;
+			children = (
+				D69A39972830BB0300ADB29D /* OfferRemitPay.swift */,
+				D69A39992830BBCD00ADB29D /* OfferRemitDetail.swift */,
+				D69A399B2830BC6400ADB29D /* OfferRemitFin.swift */,
+				D65EB2412832214700E5775A /* MyPage_Payment.storyboard */,
+			);
+			path = OfferPayment;
+			sourceTree = "<group>";
+		};
 		D69A45B5274143A300B17D6A /* my_design */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +734,7 @@
 		D6B0D5EF275114B400F4197D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D67078CC282B867800872FB3 /* HomeReview */,
 				D6DD12E92827F38F0064024A /* HomeAlarm */,
 				D6B0D5F0275114D500F4197D /* Home_Main.storyboard */,
 				D6B0D5F6275121BD00F4197D /* HomeViewDetail.swift */,
@@ -723,6 +781,7 @@
 				D6DD12EC2827F4040064024A /* HomeReAla.swift */,
 				D6DD12EE2827F4250064024A /* ReAlaCell.swift */,
 				D6DD12F02827F94E0064024A /* homeitems.swift */,
+				D646F404282EBD7100A44E95 /* HomeMainAlarmOf.swift */,
 			);
 			path = HomeAlarm;
 			sourceTree = "<group>";
@@ -730,6 +789,7 @@
 		D6DE3AB8274288940006A45E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D656B60C282F47BC00A26360 /* leavit_nobg_gif.gif */,
 				D62748E8273ABB580006B9FA /* Main.storyboard */,
 				D694608527FC7FE200F0E9BB /* TutorialView.swift */,
 				D6B5233227BA70A500BF4046 /* loginPage.swift */,
@@ -743,6 +803,9 @@
 				D68713D427EB071D0090AE1C /* CustomPopUp.swift */,
 				D65CDE5127EC930300A38149 /* locationView.swift */,
 				D6B4A018280DA8F500714900 /* StartView.swift */,
+				D646F400282EB8ED00A44E95 /* CustomAlterCheck.swift */,
+				D656B60E282F49DA00A26360 /* gitLoader.swift */,
+				D656B610282F505600A26360 /* MyMainCheckView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -756,6 +819,7 @@
 				D69A45B3274141F900B17D6A /* JopTime_jobofferwrite.swift */,
 				D656FD0A2743D6C600EDD4C3 /* JobTag_jobofferwrite.swift */,
 				D65E69D4280E917F00C58D26 /* JobLocation_jobofferwrite.swift */,
+				D646F406282EC23400A44E95 /* JobOfferLoadView.swift */,
 			);
 			path = JobOfferMain;
 			sourceTree = "<group>";
@@ -851,6 +915,7 @@
 				2CF1852E275A405E009AF0B9 /* FocusView.xib in Resources */,
 				D697A92C27EDEAEA0004B34B /* HomeContentTableView1.xib in Resources */,
 				D68A73442820ECEA003AD984 /* MenuCell_ScrapVC.xib in Resources */,
+				D639893A2836C51900EA38E4 /* MyPage_ChargeMain.storyboard in Resources */,
 				D68A735C2820ECEA003AD984 /* ResumeSearch.storyboard in Resources */,
 				D65F379727FB3489001DF0A1 /* DetailViewSub2.storyboard in Resources */,
 				D68A736D2820ECF9003AD984 /* Resume_Search.storyboard in Resources */,
@@ -858,6 +923,7 @@
 				D68A73422820ECEA003AD984 /* MenuCell_ReviewVC.xib in Resources */,
 				D68A734B2820ECEA003AD984 /* MenuCell_RO.xib in Resources */,
 				D68A735A2820ECEA003AD984 /* Focus_RS.xib in Resources */,
+				D65EB2422832214700E5775A /* MyPage_Payment.storyboard in Resources */,
 				2CA3ABE1275A399300D7082A /* Chatting_Main.storyboard in Resources */,
 				D6DA392D27EF602C006A6F4D /* HomeCollectionViewCell2.xib in Resources */,
 				D684166127412DBF00A1FB22 /* JobOfferWrite_Main.storyboard in Resources */,
@@ -869,6 +935,7 @@
 				D6A16A1B282A143B00EE67C1 /* NotoSansKR-Regular.otf in Resources */,
 				D6A16A1D282A143B00EE67C1 /* OFL.txt in Resources */,
 				D6B7F3A62768BF14003B4012 /* DetailViewSub.storyboard in Resources */,
+				D656B60D282F47C100A26360 /* leavit_nobg_gif.gif in Resources */,
 				2C711D7727F357E00048C6E1 /* CSMenuCell.xib in Resources */,
 				D68A73452820ECEA003AD984 /* Focus_ReviewVC.xib in Resources */,
 				D6A16A18282A143B00EE67C1 /* NotoSansKR-Bold.otf in Resources */,
@@ -991,6 +1058,7 @@
 				D68A73622820ECEA003AD984 /* ROTableViewCell.swift in Sources */,
 				D68A737128211C8D003AD984 /* ContractMainView2.swift in Sources */,
 				D6F31ADA27F446D7000E06BA /* WriteAlterView.swift in Sources */,
+				D69A399C2830BC6400ADB29D /* OfferRemitFin.swift in Sources */,
 				D63DBFF027DF21E3000872E2 /* SignUpDetail.swift in Sources */,
 				D6B7F3AA2768CBC4003B4012 /* FinishProposal.swift in Sources */,
 				D68A73532820ECEA003AD984 /* Recommendation_Search.swift in Sources */,
@@ -1026,18 +1094,22 @@
 				D629489827567EC400D50DF1 /* SearchingOptionWorktime.swift in Sources */,
 				D67B88E728216782001084E7 /* ContractModel.swift in Sources */,
 				D694608627FC7FE200F0E9BB /* TutorialView.swift in Sources */,
+				D69A399A2830BBCD00ADB29D /* OfferRemitDetail.swift in Sources */,
 				D6EA4BA727624CAA00D86DF9 /* tagTableViewCell1.swift in Sources */,
 				D68A73512820ECEA003AD984 /* ScrapTableViewCell.swift in Sources */,
 				D68A73412820ECEA003AD984 /* MenuCell_ScrapVC.swift in Sources */,
+				D67078D0282B86EA00872FB3 /* HomeReviewSearch.swift in Sources */,
 				D6DA393027EF6063006A6F4D /* HomeContentTableView2.swift in Sources */,
 				D6CC04A1280D77CB00B97307 /* MarkerInfoWindow.swift in Sources */,
 				2C711D7527F3557F0048C6E1 /* CSMenuCell.swift in Sources */,
 				2CE199972767662300399CB6 /* DetailViewController.swift in Sources */,
+				D65EB2462832540C00E5775A /* MyPageMainOff.swift in Sources */,
 				D62748E3273ABB580006B9FA /* AppDelegate.swift in Sources */,
 				2CA3ABE3275A39B000D7082A /* Chatting_ViewController.swift in Sources */,
 				D67B88E52821657E001084E7 /* EmployContractTableViewCell.swift in Sources */,
 				D65F379927FB3A1D001DF0A1 /* DetailProposal2.swift in Sources */,
 				D68A734D2820ECEA003AD984 /* EmployContract_Offer.swift in Sources */,
+				D656B611282F505700A26360 /* MyMainCheckView.swift in Sources */,
 				D656FD0D2743DEA000EDD4C3 /* JobSelect_jobsearchwrite.swift in Sources */,
 				D620126E27468CF7002A64D8 /* MapViewMain.swift in Sources */,
 				D629489927567EC400D50DF1 /* SearchingOptionGender.swift in Sources */,
@@ -1045,15 +1117,20 @@
 				D68A73522820ECEA003AD984 /* RSFirstVC.swift in Sources */,
 				D68A735E2820ECEA003AD984 /* JSLFirstVC.swift in Sources */,
 				D68A73562820ECEA003AD984 /* ResumeSearch.swift in Sources */,
+				D646F403282EBB2B00A44E95 /* HomeReviewOffer.swift in Sources */,
 				D683F45027A3FFF20045A7BF /* MyPageMain.swift in Sources */,
 				2C7135B328241DC400511394 /* ScrapVC.swift in Sources */,
 				D668365127E0BA8100CFE39A /* KeywordCheck.swift in Sources */,
+				D639893C2836C54000EA38E4 /* MainChargeMyPage.swift in Sources */,
 				D68A736B2820ECF9003AD984 /* JOLFirstVC.swift in Sources */,
 				D68A733E2820ECEA003AD984 /* JSLSecondVC.swift in Sources */,
+				D69A39982830BB0300ADB29D /* OfferRemitPay.swift in Sources */,
 				D63DBFEE27DF21AB000872E2 /* Password_init.swift in Sources */,
 				D61F68F227EA039A00C2666D /* EmailView.swift in Sources */,
 				2C1EFF25275B96B200624550 /* FirstVC.swift in Sources */,
 				D6B5233327BA70A500BF4046 /* loginPage.swift in Sources */,
+				D646F405282EBD7100A44E95 /* HomeMainAlarmOf.swift in Sources */,
+				D646F401282EB8ED00A44E95 /* CustomAlterCheck.swift in Sources */,
 				D620126327467D41002A64D8 /* JobTag_jobsearchwrite.swift in Sources */,
 				D611C19F275E7B810038A5E3 /* item2TableViewCell.swift in Sources */,
 				2CF1852A275A3F72009AF0B9 /* MenuCell.swift in Sources */,
@@ -1065,9 +1142,11 @@
 				D697A92B27EDEAEA0004B34B /* HomeContentTableView1.swift in Sources */,
 				D68A73402820ECEA003AD984 /* MenuCell_ReviewVC.swift in Sources */,
 				D6DD12ED2827F4040064024A /* HomeReAla.swift in Sources */,
+				D65EB244283253FA00E5775A /* MyPageMainRe.swift in Sources */,
 				D68A734E2820ECEA003AD984 /* MenuCell_RO.swift in Sources */,
 				D6ACBC9827F869DF00A47EB3 /* ItemModel.swift in Sources */,
 				D611C1A1275E7BEB0038A5E3 /* item2ViewController.swift in Sources */,
+				D646F407282EC23400A44E95 /* JobOfferLoadView.swift in Sources */,
 				2C1EFF29275B97BD00624550 /* MyTableViewCell.swift in Sources */,
 				D62948A02756807500D50DF1 /* SearchingViewController.swift in Sources */,
 				D6E20AC8274018D700E4498C /* JobSearchWrite.swift in Sources */,
@@ -1079,6 +1158,7 @@
 				D68A73582820ECEA003AD984 /* JobSearchList.swift in Sources */,
 				D67B88E928216F19001084E7 /* EmployContractTableViewCell2.swift in Sources */,
 				D62748E5273ABB580006B9FA /* SceneDelegate.swift in Sources */,
+				D656B60F282F49DA00A26360 /* gitLoader.swift in Sources */,
 				D68A735D2820ECEA003AD984 /* JSLTableViewCell.swift in Sources */,
 				2C1EFF27275B96BE00624550 /* SecondVC.swift in Sources */,
 				D656FD0B2743D6C600EDD4C3 /* JobTag_jobofferwrite.swift in Sources */,
@@ -1241,7 +1321,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95JY4SG55T;
+				DEVELOPMENT_TEAM = K9PR63HHWA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MainProject/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = test;
@@ -1255,6 +1335,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1280,7 +1361,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95JY4SG55T;
+				DEVELOPMENT_TEAM = K9PR63HHWA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MainProject/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = test;
@@ -1294,6 +1375,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

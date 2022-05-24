@@ -108,6 +108,7 @@ class ContractMainView: UIViewController, UITextFieldDelegate {
                                                 selector: #selector(keyboardWillShow(_:)),
                                                 name: UIResponder.keyboardWillShowNotification,
                                                 object: nil)
+        cmhideKeyboard()
     }
     //키보드 올라갔다는 알림을 받으면 실행되는 메서드
     @objc func keyboardWillShow(_ sender:Notification){
@@ -146,7 +147,7 @@ class ContractMainView: UIViewController, UITextFieldDelegate {
             let mainT = "Cont" + email1 + email2
             
             let t1 = year1.text! + "년 " + month1.text! + "월 " + day1.text! + "일 ~ " + year2.text! + "년 " + month2.text! + "월 " + day2.text! + "일"
-            let t2 = leTime.text! + " ~ " + riTime.text!
+            let t2 = leTime.text! + "~" + riTime.text!
             let t3 = year3.text! + "년 " + month3.text! + "월 " + day3.text! + "일"
             
             contractInfo = Database.database().reference()

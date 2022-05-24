@@ -93,6 +93,7 @@ class MapViewMain: UIViewController, CLLocationManagerDelegate{
         ChangeLocation2(mapView: mapView)
         
     }
+    
     //구직의 경우
     func ChangeLocation(mapView : NMFMapView){
         locSearch = Database.database().reference().child("채팅구직마커")
@@ -101,9 +102,9 @@ class MapViewMain: UIViewController, CLLocationManagerDelegate{
 
                 for 채팅구직마커 in snapshot.children.allObjects as![DataSnapshot]{
                     let itemObjects2 = 채팅구직마커.value as? [String: AnyObject]
-                    let obLoc = itemObjects2?["근무가능위치"] as! String
+                    let obLoc = itemObjects2?["근무가능위치"] as? String ?? ""
                     //사용자 키 받아오기
-                    let obUserKey = itemObjects2?["리스트연결"] as! String
+                    let obUserKey = itemObjects2?["리스트연결"] as? String ?? ""
                     
                     let fullLocArr = obLoc.split(separator: "/")
                     let Loc = String(fullLocArr[0]) + "시 " + String(fullLocArr[1]) + " " + String(fullLocArr[2])
@@ -171,9 +172,11 @@ class MapViewMain: UIViewController, CLLocationManagerDelegate{
 
                 for 채팅구인마커 in snapshot.children.allObjects as![DataSnapshot]{
                     let itemObjects2 = 채팅구인마커.value as? [String: AnyObject]
-                    let obLoc = itemObjects2?["근무지"] as! String
+                    let obLoc = itemObjects2?["근무지"] as? String ?? ""
+                    print(obLoc)
                     //사용자 키 받아오기
-                    let obUserKey = itemObjects2?["리스트연결"] as! String
+                    let obUserKey = itemObjects2?["리스트연결"] as? String ?? ""
+                    print(obUserKey)
                     
                     let fullLocArr = obLoc.split(separator: "/")
                     let Loc = String(fullLocArr[0]) + "시 " + String(fullLocArr[1]) + " " + String(fullLocArr[2])

@@ -14,6 +14,7 @@ import MLKitVision
 
 class SignUpDetail: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var nameTextfield: UITextField! //이름 텍스트필드
     @IBOutlet weak var resTextfield1: UITextField!
     @IBOutlet weak var resTextfield2: UITextField!
@@ -60,8 +61,27 @@ class SignUpDetail: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         resTextfield2.delegate = self
         pickerImage.delegate = self
         
+        locTextfield.delegate = self
+        // Register Keyboard notifications
+        // addObserver를 통해 옵저버를 설정할 대상을 뷰컨트롤러 객체(self)로 지정
+        NotificationCenter.default.addObserver(self,
+                                                selector: #selector(keyboardWillHide(_:)),
+                                                name: UIResponder.keyboardWillHideNotification,
+                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                                selector: #selector(keyboardWillShow(_:)),
+                                                name: UIResponder.keyboardWillShowNotification,
+                                                object: nil)
         hideKeyboard()
         // Do any additional setup after loading the view.
+    }
+    //키보드 올라갔다는 알림을 받으면 실행되는 메서드
+    @objc func keyboardWillShow(_ sender:Notification){
+            self.mainView.frame.origin.y = -200
+    }
+    //키보드 내려갔다는 알림을 받으면 실행되는 메서드
+    @objc func keyboardWillHide(_ sender:Notification){
+            self.mainView.frame.origin.y = 0
     }
     override func viewWillAppear(_ animated: Bool) {
 
@@ -303,6 +323,18 @@ class SignUpDetail: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
             }
             else{
                 print("학번일치X")
+            }
+            
+            if(resText.contains(self.nameTextfield.text!)&&resText.contains(maj)&&resText.contains(sch)&&resText.contains(self.schoolNum.text!)){
+                
+                let alert = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlterCheck") as! CustomAlterCheck
+                alert.modalPresentationStyle = .overCurrentContext
+                alert.modalTransitionStyle = .crossDissolve
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            else{
+                
             }
     
         }

@@ -1,18 +1,18 @@
 {
   "images" : [
     {
+      "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "mapProPic.png",
-      "scale" : "1x"
+      "filename" : "mapProPic.png"
     },
     {
+      "filename" : "mapProPic@2x.png",
       "scale" : "2x",
-      "idiom" : "universal",
-      "filename" : "mapProPic@2x.png"
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
       "filename" : "mapProPic@3x.png",
+      "idiom" : "universal",
       "scale" : "3x"
     }
   ],

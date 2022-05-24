@@ -30,6 +30,7 @@ class DetailProposal2: UIViewController {
     @IBOutlet weak var emailTitle: UILabel!  //이메일
     @IBOutlet weak var backBtn: UIButton!
     
+    @IBOutlet weak var contractBtn: UIButton!
     
     var userId: String? //유저 uid
     var uTitle: String? //제목
@@ -46,6 +47,8 @@ class DetailProposal2: UIViewController {
     var userName1 : String?
     var userName2 : String?
     var userLoc1 : String?
+    
+    var isCheck2 = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,16 +71,16 @@ class DetailProposal2: UIViewController {
         }
     }
     
-    //닫기 기능
-    @IBAction func goBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     //디폴트로 배치되는 뒤로가기 버튼 삭제
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        self.navigationItem.hidesBackButton = true
        backBtn.addTarget(self, action: #selector(goBack(_:)), for:.touchUpInside)
+    }
+    
+    //닫기 기능
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func offerWriteInfo(){
@@ -120,14 +123,26 @@ class DetailProposal2: UIViewController {
         }
     }
     
+    @IBAction func isCheckContract(_ sender: UIButton) {
+        if(isCheck2 == false){
+            contractBtn.image("wrsuCheckOk.png")
+            isCheck2 = true
+        }
+        else{
+            contractBtn.image("wrsuCheck.png")
+            isCheck2 = false
+        }
+    }
+    
+    
     @IBAction func goSupport(_ sender: Any) {
         ref = Database.database().reference()
         
         //구직하는 입장(현재 사용자) ResearchMessage+이메일(현재사용자)
         let email = (FirebaseAuth.Auth.auth().currentUser?.email)
         let email1 = email!.components(separatedBy: ["@", "."]).joined()
-        let mainL = "ResearchMessage" + email1
         let mainL2 = "Search" + email1
+        let mainL = "ResearchMessage" + email1
         
         let docRef1 = db.collection("가입개인정보").document(email2!)
         
@@ -136,6 +151,17 @@ class DetailProposal2: UIViewController {
                 let dataDescription = document.data() as [String: AnyObject]?
                 let obName1 = dataDescription?["이름"] as! String
                 self.userName2 = obName1
+                
+                //메인화면에 나타남.
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("글제목").setValue(self.mainTitle.text!)
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("글uid").setValue(self.userId!)
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("접수완료").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("접수완료클릭").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("근무지출발").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("근무지도착").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("퇴근").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("구직리뷰").setValue("x")
+                self.ref.child("MainIng").child("search").child(email1).child("post").child("지원성공").setValue("x")
                 
                 self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이메일").setValue(self.email2)
                 self.ref.child("ChatSet").child(email1).child(mainL).child("chat").child("상대방이름").setValue(self.userName2!)
@@ -147,13 +173,6 @@ class DetailProposal2: UIViewController {
                 self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("상대방이메일").setValue(self.email2!)
                 self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("글uid").setValue(self.userId!)
                 self.ref.child("Support글지원").child(email1).child(mainL2).child("post").child("글제목").setValue(self.mainTitle.text!)
-                //메인화면에 나타남.
-                self.ref.child("MainIng").child("search").child(email1).child("post").child("글제목").setValue(self.mainTitle.text!)
-                self.ref.child("MainIng").child("search").child(email1).child("post").child("글uid").setValue(self.userId!)
-                self.ref.child("MainIng").child("search").child(email1).child("post").child("접수완료").setValue("x")
-                self.ref.child("MainIng").child("search").child(email1).child("post").child("근무지출발").setValue("x")
-                self.ref.child("MainIng").child("search").child(email1).child("post").child("근무지도착").setValue("x")
-                self.ref.child("MainIng").child("search").child(email1).child("post").child("퇴근").setValue("x")
                 
                 
  
@@ -164,10 +183,9 @@ class DetailProposal2: UIViewController {
         
         //구인하는 입장(글 작성자) OfferMessage+이메일(글 작성자)
         let email2 = email2!.components(separatedBy: ["@", "."]).joined()
-        let mainR = "OfferMessage" + email2
-        print(mainR)
         let docRef2 = db.collection("가입개인정보").document(email!)
         let mainR2 = "Offer" + email2
+        let mainR = "OfferMessage" + email2
         
         docRef2.getDocument { (document, error) in
             if let document = document, document.exists {
@@ -176,6 +194,15 @@ class DetailProposal2: UIViewController {
                 let obLoc = dataDescription?["위치"] as! String
                 self.userName1 = obName
                 self.userLoc1 = obLoc
+ 
+                //메인화면에 나타남.
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("글제목").setValue(self.mainTitle.text!)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("글uid").setValue(self.userId!)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("접수완료").setValue("x")
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("알람완료").setValue("x")
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("지원자이름").setValue(self.userName1!)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("지원자이메일").setValue(email)
+                self.ref.child("MainIng").child("offer").child(email2).child("post").child("구인리뷰").setValue("x")
                 
                 self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("상대방이메일").setValue(email)
                 self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자이름").setValue(self.userName1!)
@@ -183,18 +210,11 @@ class DetailProposal2: UIViewController {
                 self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자시간").setValue("시간")
                 self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("지원자지역").setValue(self.userLoc1)
                 self.ref.child("ChatSet").child(email2).child(mainR).child("chat").child("글제목").setValue(self.mainTitle.text!)
- 
+                
                 self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("상대방이메일").setValue(email)
                 self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("글uid").setValue(self.userId!)
                 self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("지원자이름").setValue(self.userName1!)
                 self.ref.child("Support글지원").child(email2).child(mainR2).child("post").child("글제목").setValue(self.mainTitle.text!)
-                
-                //메인화면에 나타남.
-                self.ref.child("MainIng").child("offer").child(email2).child("post").child("글제목").setValue(self.mainTitle.text!)
-                self.ref.child("MainIng").child("offer").child(email2).child("post").child("글uid").setValue(self.userId!)
-                self.ref.child("MainIng").child("offer").child(email2).child("post").child("접수완료").setValue("x")
-                self.ref.child("MainIng").child("offer").child(email2).child("post").child("지원자이름").setValue(self.userName1!)
-                self.ref.child("MainIng").child("offer").child(email2).child("post").child("지원자이메일").setValue(email)
 
             } else {
                 print("Document does not exist")

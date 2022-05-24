@@ -78,7 +78,7 @@ class HomeReAla: UIViewController, UITableViewDelegate, UITableViewDataSource{
         //정보 전달 : indexPath.row
         let email1 = email!.components(separatedBy: ["@", "."]).joined()
         ref = Database.database().reference().child("MainIng").child("offer").child(email1).child("post")
-        ref.updateChildValues(["접수완료": "yes"])
+        ref.updateChildValues(["알람완료": "yes"])
         
         itemOffer = Database.database().reference().child("MainIng").child("offer").child(email1)
         
@@ -95,7 +95,7 @@ class HomeReAla: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     
                     self.itemSearch = Database.database().reference().child("MainIng").child("search").child(email2).child("post")
                     
-                    self.itemSearch.updateChildValues(["접수완료": "yes"])
+                    self.itemSearch.updateChildValues(["지원성공": "o"])
                 }
             }
             

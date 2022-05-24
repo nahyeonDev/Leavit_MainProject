@@ -67,8 +67,9 @@ class HomeSearchMain: UIViewController {
                 for MainIng in snapshot.children.allObjects as![DataSnapshot]{
                     let itemObjects = MainIng.value as? [String: AnyObject]
                     
-                    let oksign = itemObjects?["접수완료"] as! String
-                    let oktitle = itemObjects?["글제목"] as! String
+                    let oksign = itemObjects?["접수완료"] as? String ?? ""
+                    let oktitle = itemObjects?["글제목"] as? String ?? ""
+                    let okreview = itemObjects?["구직리뷰"] as? String ?? ""
                     self.mainTitle.text = oktitle
                     
                     if(oksign == "yes"){
@@ -81,6 +82,11 @@ class HomeSearchMain: UIViewController {
                         self.mainView.isHidden = true
                         self.startView.isHidden = false
                         self.mainView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    }
+                    if(okreview == "yes"){
+                        self.reviewBtn.isHidden = true
+                    }
+                    else{
                     }
                 }
             }
@@ -152,4 +158,13 @@ class HomeSearchMain: UIViewController {
         ref.updateChildValues(["퇴근": "yes"])
     }
     
+    @IBAction func goWriteReview(_ sender: UIButton) {
+        //storyboard를 통해 두번쨰 화면의 storyboard ID를 참조하여 뷰 컨트롤러를 가져옵니다.
+            guard let svc = self.storyboard?.instantiateViewController(withIdentifier: "HomeReviewSearch") else {
+                return
+            }
+            
+            //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
+            self.present(svc, animated: true)
+    }
 }

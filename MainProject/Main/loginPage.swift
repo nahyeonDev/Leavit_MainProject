@@ -14,13 +14,25 @@ class loginPage: UIViewController{
     @IBOutlet weak var idTextfield: UITextField! //아이디 텍스트필드
     @IBOutlet weak var pwdTextfield: UITextField! //비밀번호 텍스트필드
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var autoCheck: UIButton! //자동로그인
     
+    var check = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         errorMessage.isHidden = true
         hideKeyboardlo()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            
+            guard let dvc = self.storyboard?.instantiateViewController(identifier: "MyMainCheckView") else { return }
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
     }
     
     @IBAction func loginFin(_ sender: UIButton) {
@@ -29,7 +41,7 @@ class loginPage: UIViewController{
                     if user != nil{
                         print("login success")
                         // navigation controller 로 화면 전환
-                          guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "tabbarcontroller") else { return }
+                          guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "MyMainCheckView") else { return }
                           self.navigationController?.pushViewController(homeVC, animated: true)
 
                     }
@@ -45,6 +57,7 @@ class loginPage: UIViewController{
         
         
     }
+    
     
     @IBAction func backBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)

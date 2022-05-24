@@ -41,6 +41,7 @@ class ContractMainView2: UIViewController, UITextFieldDelegate {
     var titleN : String?
     
     var contractInfo: DatabaseReference!
+    var ref: DatabaseReference!
     
     @IBOutlet weak var bckBtn: UIButton!
     @IBOutlet weak var mainView: UIView!
@@ -123,7 +124,7 @@ class ContractMainView2: UIViewController, UITextFieldDelegate {
                     
                     self.dayTimeTitle.text = obConTime as? String
                     self.conTitle.text = obCont as? String
-                    self.detailLocTitle.text = obWLoc as? String
+                    self.timeTitle.text = obWLoc as? String
                     self.moneyTitle.text = obPay as? String
                     self.signOffer.text = obSign as? String
                 }
@@ -152,6 +153,23 @@ class ContractMainView2: UIViewController, UITextFieldDelegate {
             self.contractInfo.child("근로계약리스트").child(mainOf).child("post").child("글제목").setValue(titleN)
             self.contractInfo.child("근로계약리스트").child(mainOf).child("post").child("구인자연락처").setValue(phoneTitle1.text)
             self.contractInfo.child("근로계약리스트").child(mainOf).child("post").child("구직자연락처").setValue(phoneTitle2.text)
+            //구인자 송금 데이터베이스
+            let fullTimeArr = timeTitle.text!.split(separator: "~")
+            let time1 = fullTimeArr[0].split(separator: ":")
+            let time2 = fullTimeArr[1].split(separator: ":")
+            let timeM2 = String(time2[0])
+            let timeM1 = String(time1[0])
+            let timeM = (Int(timeM2) ?? 0)  - (Int(timeM1) ?? 0)
+            print(timeM)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("구직자이름").setValue(reNameTitle.text)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("근로계약글uid").setValue(mainT)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("글제목").setValue(titleN)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("시급").setValue(moneyTitle.text)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("근무시간1").setValue(timeTitle.text)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("근무시간2").setValue(timeM)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("근무날짜").setValue(dayTimeTitle.text)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("업직종").setValue(conTitle.text)
+            self.contractInfo.child("송금리스트").child(mainOf).child("post").child("구직자이메일").setValue(email)
 
             //구직자 입장 마이페이지 연결
             self.contractInfo.child("근로계약리스트").child(mainRe).child("post").child("구인자이름").setValue(ofNameTitle.text)
@@ -160,6 +178,12 @@ class ContractMainView2: UIViewController, UITextFieldDelegate {
             self.contractInfo.child("근로계약리스트").child(mainRe).child("post").child("글제목").setValue(titleN)
             self.contractInfo.child("근로계약리스트").child(mainRe).child("post").child("구인자연락처").setValue(phoneTitle1.text)
             self.contractInfo.child("근로계약리스트").child(mainRe).child("post").child("구직자연락처").setValue(phoneTitle2.text)
+            
+            self.ref = Database.database().reference().child("MainIng").child("offer").child(email2).child("post")
+            self.ref.updateChildValues(["접수완료": "yes"])
+            
+            self.ref = Database.database().reference().child("MainIng").child("search").child(email1).child("post")
+            self.ref.updateChildValues(["접수완료": "yes"])
 
             
             // navigation controller 로 화면 전환
